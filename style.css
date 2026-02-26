@@ -42,7 +42,9 @@ nav a {
 }
 
 .pickup {
-  padding: 150px 370px 0 370px;
+  padding: 150px 16px 0;
+  max-width: 1200px; /* 最大幅を1200pxに設定 */
+  margin: 0 auto; /* 要素を中央寄せ */
   display: flex;
   gap: 24px;
 }
@@ -77,10 +79,12 @@ nav a {
 }
 
 .main-content {
-  padding: 0 370px;
   display: flex;
   align-items: flex-start;
+  max-width: 1200px;
   gap: 40px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 
 .main-content h2 {
@@ -114,11 +118,13 @@ nav a {
 }
 
 aside {
-  width: 30%;
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 
 aside .aside-image {
-  width: 130px;
+  width: 120px;
   border-radius: 50%;
   display: block;
   margin: 0 auto 38px;
@@ -132,9 +138,8 @@ aside .aside-image {
 .aside-text {
   color: #333;
   font-size: 14px;
-  margin: 0 auto 50px;
-  max-width: 44ch;
-  font-weight: normal;
+  margin: 0 auto 60px;
+  max-width: 1200px;
 }
 
 .aside-name-2 {
@@ -158,6 +163,12 @@ aside .aside-image {
   color: #333;
   font-size: 14px;
   margin: -10px auto 48px;
+}
+
+.archive {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 
 .archive h3 {
@@ -187,14 +198,22 @@ footer {
 footer .content {
   display: flex;
   align-items: flex-start; /* 上揃え */
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+footer .about-text {
+  font-size: 14px;
 }
 
 footer section {
   flex: 1;
   min-width: 0;
   justify-content: space-between;
-  margin: 50px;
-  padding: 40px;
+  padding-top: 60px;
+  padding-bottom: 36px;
 }
 
 .item-1 h3 {

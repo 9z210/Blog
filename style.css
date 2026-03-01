@@ -5,34 +5,36 @@
   padding: 0;
 }
 
-body {
-  margin:0;
+body{
+  margin: 0;
 }
 
 header {
-  position: fixed;
   background-color: #fff;
+  position: fixed;
   width: 100%;
 }
 
 header img {
-  position: relative;
-  margin: 0;
-  top: 20px;
-  margin-bottom: 36px;
+  display: block;
+  margin: 16px auto;
   left: 370px;
 }
 
 nav {
   background: #333;
+  margin-top: 20px;
 }
 
 nav ul {
-  display: flex;
-  list-style: none;
-  gap: 60px;
-  font-size: 14px;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 10px;
+  align-items: center;
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  font-size: 14px;
   margin-left: 360px;
 }
 
@@ -42,17 +44,16 @@ nav a {
 }
 
 .pickup {
-  padding: 150px 16px 0;
+  padding: 150px 0 0;
   max-width: 1200px; /* 最大幅を1200pxに設定 */
   margin: 0 auto; /* 要素を中央寄せ */
   display: flex;
   gap: 24px;
+  background: pink;
 }
 
 .pickup article {
   flex: 1;
-  width: 375px;
-  flex: none;
 }
 
 .pickup img {
@@ -78,18 +79,20 @@ nav a {
   color: #111;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 16px auto;
+  background: skyblue;
+}
+
 .main-content {
   display: flex;
   align-items: flex-start;
-  max-width: 1200px;
   gap: 40px;
-  padding: 0 16px;
-  margin: 0 auto;
 }
 
 .main-content h2 {
   margin-bottom: 16px;
-
 }
 
 .main-content ul {
@@ -100,8 +103,18 @@ nav a {
   gap: 16px;
 }
 
+.readmore-1 {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 80px;
+}
+
+.readmore-1 a {
+  color: #111;
+}
+
 .main-content article {
-  width: 760px;
+  flex: 2;
 }
 
 .main-content img {
@@ -112,22 +125,23 @@ nav a {
 }
 
 .main-text {
-  width: 700px;
   margin: 0 auto 24px;
   color: #333;
 }
 
 aside {
-  max-width: 1200px;
   padding: 0 16px;
-  margin: 0 auto;
+}
+
+.main-content aside {
+  flex: 1;
 }
 
 aside .aside-image {
-  width: 120px;
+  width: 130px;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 38px;
+  margin: 0 auto 20px;
 }
 
 .aside-name-1 {
@@ -187,21 +201,22 @@ aside .aside-image {
 .archive ul li {
    border-bottom: 1px solid #666;
    margin-bottom: 20px;
-   padding-bottom: 20px;
-   padding-left: 24px;
+   padding-bottom: 21px;
+   padding-left: 22px;
+   margin-left: -4px;
 }
 
 footer {
-  background: #eee;
+  background: #f7f6f6;
 }
 
 footer .content {
   display: flex;
   align-items: flex-start; /* 上揃え */
   max-width: 1200px;
-  padding: 0 16px;
+  padding: 16px;
   margin: 0 auto;
-  gap: 50px;
+  gap: 48px;
 }
 
 footer .about-text {
@@ -212,8 +227,8 @@ footer section {
   flex: 1;
   min-width: 0;
   justify-content: space-between;
-  padding-top: 60px;
-  padding-bottom: 36px;
+  padding-top: 38px;
+  padding-bottom: 34px;
 }
 
 .item-1 h3 {
@@ -227,6 +242,7 @@ footer section {
 
 footer .about-ul {
   list-style: none;
+  font-size: 14px;
 }
 
 footer .about-ul li::before {
@@ -240,22 +256,29 @@ footer .about-ul li::before {
 }
 
 .item-2 h3 {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #777;
   padding-bottom: 24px;
   margin-bottom: 16px;
 }
 
-footer .menu-ul li {
+.item-2 .menu-ul li {
   font-size: 14px;
   list-style: none;
-  border-bottom: 1px solid #333;
-  margin-bottom: 16px;
-  padding-bottom: 16px;
+  border-bottom: 1px solid #777;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
   padding-left: 20px;
+  color: #333;
 }
 
 .item-3 h3 {
   margin-bottom: 24px;
+}
+
+.item-3 p {
+  color: #333;
+  font-size: 14px;
+  margin-top: 16px;
 }
 
 small {
@@ -264,4 +287,21 @@ small {
   color: #333;
   font-size: 12px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+  nav ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pickup {
+    flex-direction: column;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
 }

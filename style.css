@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-body{
+body {
   margin: 0;
 }
 
@@ -15,10 +15,14 @@ header {
   width: 100%;
 }
 
+header .header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
 header img {
   display: block;
-  margin: 16px auto;
-  left: 370px;
 }
 
 nav {
@@ -29,13 +33,12 @@ nav {
 nav ul {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 9px;
   align-items: center;
   display: flex;
   gap: 60px;
   list-style: none;
   font-size: 14px;
-  margin-left: 360px;
 }
 
 nav a {
@@ -45,11 +48,12 @@ nav a {
 
 .pickup {
   padding: 150px 0 0;
-  max-width: 1200px; /* 最大幅を1200pxに設定 */
-  margin: 0 auto; /* 要素を中央寄せ */
+  max-width: 1200px;
+  /* 最大幅を1200pxに設定 */
+  margin: 0 auto;
+  /* 要素を中央寄せ */
   display: flex;
   gap: 24px;
-  background: pink;
 }
 
 .pickup article {
@@ -82,7 +86,6 @@ nav a {
 .container {
   max-width: 1200px;
   margin: 16px auto;
-  background: skyblue;
 }
 
 .main-content {
@@ -192,18 +195,18 @@ aside .aside-image {
   padding-bottom: 24px;
 }
 
-.archive ul{
+.archive ul {
   display: block;
   margin-top: -16px;
   margin-bottom: 150px;
 }
 
 .archive ul li {
-   border-bottom: 1px solid #666;
-   margin-bottom: 20px;
-   padding-bottom: 21px;
-   padding-left: 22px;
-   margin-left: -4px;
+  border-bottom: 1px solid #666;
+  margin-bottom: 20px;
+  padding-bottom: 21px;
+  padding-left: 22px;
+  margin-left: -4px;
 }
 
 footer {
@@ -212,7 +215,8 @@ footer {
 
 footer .content {
   display: flex;
-  align-items: flex-start; /* 上揃え */
+  align-items: flex-start;
+  /* 上揃え */
   max-width: 1200px;
   padding: 16px;
   margin: 0 auto;
@@ -291,17 +295,69 @@ small {
 
 @media screen and (max-width: 768px) {
 
+  header img {
+    margin: 0 auto 0 16px;
+  }
+
+  nav {
+    padding-bottom: -8px;
+  }
+
   nav ul {
-    flex-direction: column;
-    gap: 16px;
+    display: flex;
+    overflow-x: auto;
+    margin-left: 8px;
+    padding-right: 70px;
+    gap: 60px;
+  }
+
+  nav li {
+    flex: 0 0 auto;
+  }
+
+  .container-1 {
+    margin: 0;
+    padding: 0 16px;
   }
 
   .pickup {
     flex-direction: column;
   }
 
+  .readmore {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
   .main-content {
     flex-direction: column;
   }
+
+  aside {
+    padding: 0;
+  }
+
+  aside .aside-image {
+  margin-top: -20px;
+}
+
+footer .content {
+  flex-direction: column;
+}
+
+.about-ul li{
+  margin-bottom: 4px;
+}
+
+.item-2 {
+  width: 100%;
+  margin-top: -60px;
+}
+
+.item-3 {
+  margin-top: -110px;
+  margin-bottom: 40px;
+}
 
 }

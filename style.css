@@ -81,6 +81,30 @@ nav a {
 
 .readmore a {
   color: #111;
+  text-decoration: none;
+  position: relative;
+}
+
+.readmore a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #111;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.readmore a:hover::after {
+  transform: translateY(6px);
+  opacity: 0;
 }
 
 .container {
@@ -114,7 +138,32 @@ nav a {
 
 .readmore-1 a {
   color: #111;
+  text-decoration: none;
+  position: relative;
 }
+
+.readmore-1 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #111;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.readmore-1 a:hover::after {
+  transform: translateY(6px);
+  opacity: 0;
+}
+
 
 .main-content article {
   flex: 2;
@@ -273,6 +322,11 @@ footer .about-ul li::before {
   padding-bottom: 14px;
   padding-left: 20px;
   color: #333;
+}
+
+.item-2 .menu-ul li a {
+  color: #333;
+  text-decoration: none;
 }
 
 .item-3 h3 {
